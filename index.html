@@ -1,0 +1,66 @@
+<!doctype html>
+<!--  implies we are using HTML5 by including this  -->
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Geometric Shapes</title>
+    <meta name="author" content="Harish Majeti">
+    <meta name="description" content="Application to draw desired geometric shape">
+    <meta name="application-name" content="Geometricc Shapes">
+    <meta name="keywords" content="HTML, CSS, JavaScript, AngularJS">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <base href="/">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+
+
+    <link rel="stylesheet" href="styles/main.css">
+    <!-- endbuild -->
+</head>
+
+<body ng-app="myApp">
+
+    <div class="container">
+        <div class="jumbotron">
+
+            <h1>Geometric shapes</h1>
+        </div>
+
+
+        <!-- App contents -->
+        <div class="container">
+
+            <div ng-view> </div>
+            <!-- So as to get render the views here which are inside views folder -->
+        </div>
+
+        <!-- Page footer -->
+        <footer>
+            <small>&copy; Copyright 2017, Harish Majeti</small>
+
+
+        </footer>
+
+
+        <!-- scripts/scripts.js -->
+
+        <script src="https://code.angularjs.org/1.5.5/angular.min.js"></script>
+        <script src="https://code.angularjs.org/1.5.5/angular-route.min.js"></script>
+        <script src="https://code.angularjs.org/1.5.5/angular-animate.min.js"></script>
+        <script src="https://code.angularjs.org/1.5.5/angular-cookies.min.js"></script>
+        <script src="https://code.angularjs.org/1.5.5/angular-resource.min.js"></script>
+        <script src="https://code.angularjs.org/1.5.5/angular-touch.min.js"></script>
+        <script src="https://code.angularjs.org/1.5.5/angular-sanitize.min.js"></script>
+        <script src="app.js"></script>
+        <script src="controllers/home.js"></script>
+        <script src="services/square.js"></script>
+        <script src="services/triangle.js"></script>
+        <script src="services/diamond.js"></script>
+        <script src="services/rectangle.js"></script>
+
+
+</body>
+
+</html>

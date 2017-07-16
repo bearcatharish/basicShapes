@@ -1,0 +1,45 @@
+<!-- app/views/home.html -->
+
+<!-- form for the creation of an geometric shape -->
+<form name="shapeForm" class ="form-group">
+  <!-- dropdown select for shape type -->
+  <label>
+    Shape:
+    <select class = "form-control" ng-model="shapeSelected" ng-options="shape.name for shape in shapes" ng-change="selectShape()"></select>
+  </label>
+
+  <!-- height of shape -->
+  <label>
+    Height:
+    <input class = "form-control" type="number" name="height" ng-model="shapeHeight" ng-change="setHeight(shapeHeight)" required></input>
+    <span class="error" ng-show="shapeForm.height.$error.required">
+      <i class="fa fa-exclamation-triangle"></i>
+      Shape height is required.
+    </span>
+    <span class="error" ng-show="shapeHeightMsg.length > 0">
+      <i class="fa fa-exclamation-triangle"></i>
+      {{ shapeHeightMsg }}
+    </span>
+  </label>
+
+  <!-- text box for label in shape -->
+  <label>
+    Label:
+    <input class = "form-control" type="text" ng-model="shapeLabel" ng-change="setLabel(shapeLabel)"></input>
+    <span class="error" ng-show="shapeLabelMsg.length > 0">
+    </span>
+  </label>
+
+  <!-- row to display the label on -->
+  <label id="labelRow" ng-show="shapeLabel.length > 0">
+    Label Row:
+    <input class = "form-control"  type="number" name="labelRow" ng-model="labelRow" ng-change="setLabelRow(labelRow)" required></input>
+    <span class="error" ng-show="labelRowMsg.length > 0">
+      <i class="fa fa-exclamation-triangle"></i>
+      {{ labelRowMsg }}
+    </span>
+  </label>
+</form>
+
+<!-- area for gemetric shape-->
+<b><pre>{{ shape }}</pre></b> 
